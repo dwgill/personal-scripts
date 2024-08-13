@@ -32,6 +32,14 @@ def airtable_personal_access_token():
     return _get_env_var("AIRTABLE_PERSONAL_ACCESS_TOKEN", coerce=str)
 
 
+def airtable_daniel_network_base_id():
+    return _get_env_var("AIRTABLE_DANIEL_NETWORK_BASE_ID", coerce=str)
+
+
+def airtable_daniel_network_people_table_id():
+    return _get_env_var("AIRTABLE_DANIEL_NETWORK_PEOPLE_TABLE_ID", coerce=str)
+
+
 def _surround_with_quotes(string: str) -> str:
     if "'" not in string:
         return f"'{string}'"
